@@ -1,31 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
-
+import PageNotFound from "./pages/PageNotFound";
+import HomePage from "./pages/HomePage";
+import ZooShareLayout from "./pages/ZooShareLayout";
+import Zoo from "./pages/Zoo";
+import AnimalCard from "./pages/AnimalCard";
+import AddAnimal from "./pages/AddAnimal";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          {/* 
-          <Route index element={<Home />} />
-          
-          <Route path='about' element={<About />} />
+          <Route index element={<HomePage />} />
 
-          <Route path='products' element={<SharedProductLayout />}>
-            <Route index element={<Products />} />
-            <Route path=':productId' element={<SingleProduct />} />
+          <Route path="zoo" element={<ZooShareLayout />}>
+            <Route index element={<Zoo />} />
+            <Route path=":animalId" element={<AnimalCard />} />
           </Route>
 
-          <Route path='login' element={<Login setUser={setUser}></Login>} />
-          <Route
-            path='dashboard'
-            element={
-              <ProtectedRoute user={user}>
-                <Dashboard user={user} />
-              </ProtectedRoute>
-            }
-          />
-          <Route path='*' element={<Error />} /> */}
+          <Route path="addAnimal" element={<AddAnimal />} />
+
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

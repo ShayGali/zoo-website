@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom";
-import StyledNavbar from "../components/StyledNavbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 const Home = () => {
   return (
     <>
-      <StyledNavbar />
+      <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 };

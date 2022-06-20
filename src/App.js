@@ -1,10 +1,10 @@
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SharedLayout from "./pages/SharedLayout";
+import SharedLayout from "./components/SharedLayout";
 import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
-import ZooShareLayout from "./pages/ZooShareLayout";
+import ZooShareLayout from "./components/ZooShareLayout";
 import Zoo from "./pages/Zoo";
 import AnimalDetails from "./pages/AnimalDetails";
 import AddAnimal from "./pages/AddAnimal";

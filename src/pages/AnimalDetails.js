@@ -10,9 +10,13 @@ export default function AnimalDetails() {
   const [animal, setAnimal] = useState();
   const [displayEdit, setDisplayEdit] = useState(false);
 
+  const [isFetch, setIsFetch] = useState(false);
+
   useLayoutEffect(() => {
     getAnimals().then((animals) => {
-      setAnimal(animals.find((animal) => animal.id === id).data);
+      let animal = animals.find((animal) => animal.id === id);
+      if (animal) setAnimal(animal.data);
+      setIsFetch(true);
     });
   }, [id]);
 
@@ -24,7 +28,7 @@ export default function AnimalDetails() {
 
   return (
     <>
-      {animal && (
+      {isFetch && animal && (
         <div className="card">
           <div className="row">
             <div className="card-body col-sm-6">
@@ -48,15 +52,16 @@ export default function AnimalDetails() {
               animal={animal}
               finishEdit={() => {
                 refreshData();
-                alert("change successfully");
                 setDisplayEdit(false);
+
+                alert("change successfully");
               }}
             />
           )}
         </div>
       )}
 
-      {!animal && (
+      {isFetch && !animal && (
         <h3 style={{ color: "red" }}>Animal with the id {id} not found</h3>
       )}
 

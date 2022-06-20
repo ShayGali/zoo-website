@@ -33,7 +33,16 @@ export default function AddAnimal() {
       inIsrael: inIsrael,
       numberOfLegs: numberOfLegs,
     };
+    clearFields();
     addAnimal(animal);
+  }
+
+  function clearFields() {
+    setName("");
+    setImgUrl("");
+    setType("");
+    setInIsrael(false);
+    setNumberOfLegs(0);
   }
 
   const [validInputs, setValidInputs] = useState(true);
@@ -91,8 +100,9 @@ export default function AddAnimal() {
           <select
             className="form-control"
             onChange={(e) => setType(e.target.value)}
+            value={type}
           >
-            <option>Choses...</option>
+            <option value={""}>Choses...</option>
             <option value={"air"}>Air</option>
             <option value={"sea"}>Sea</option>
             <option value={"land"}>Land</option>
@@ -104,6 +114,7 @@ export default function AddAnimal() {
             type="checkbox"
             className="form-check-input"
             onClick={() => setInIsrael(!inIsrael)}
+            checked={inIsrael}
           />
         </div>
       </div>

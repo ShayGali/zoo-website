@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAnimals } from "../firebase/zooController";
-import AnimalCard from "./AnimalCard";
+import AnimalCard from "../components/AnimalCard";
 
 export default function Zoo() {
   const [animals, setAnimals] = useState([]);

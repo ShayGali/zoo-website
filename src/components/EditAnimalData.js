@@ -49,7 +49,9 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
         <p>
           The Fields:{" "}
           {inValidInputs.map((i) => (
-            <span style={{ color: "red" }}>{i + ", "}</span>
+            <span style={{ color: "red" }} key={i}>
+              {i + ", "}
+            </span>
           ))}{" "}
           are invalid
         </p>

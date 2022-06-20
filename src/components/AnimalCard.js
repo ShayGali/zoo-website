@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import EditAnimalData from "../components/EditAnimalData";
+import React from "react";
 import { deleteAnimal } from "../firebase/zooController";
-
+import { Link } from "react-router-dom";
 export default function AnimalCard({ id, animal, refreshData }) {
-  const [displayEdit, setDisplayEdit] = useState(false);
-
   const deleteAnimalHandler = () => {
     // eslint-disable-next-line no-restricted-globals
     if (confirm("Are You sure?")) {
@@ -20,13 +17,9 @@ export default function AnimalCard({ id, animal, refreshData }) {
             <p>Name: {animal.name}</p>
             <p>Number Of Legs: {animal.numberOfLegs}</p>
             <p>In Israel: {animal.inIsrael ? "Yes" : "No"}</p>
-            <button
-              className="btn btn-primary"
-              onClick={() => setDisplayEdit(!displayEdit)}
-            >
-              {displayEdit ? "Close Edit" : "Edit"}
-            </button>
-
+            <Link to={id}>
+              <button className="btn btn-primary">View Data</button>
+            </Link>
             <button className="btn btn-danger" onClick={deleteAnimalHandler}>
               Delete
             </button>
@@ -35,17 +28,6 @@ export default function AnimalCard({ id, animal, refreshData }) {
             <img src={animal.imgUrl} alt="" className="profile-img" />
           </div>
         </div>
-        {displayEdit && (
-          <EditAnimalData
-            id={id}
-            animal={animal}
-            finishEdit={() => {
-              refreshData();
-              alert("change successfully");
-              setDisplayEdit(false);
-            }}
-          />
-        )}
       </div>
     </div>
   );

@@ -1,18 +1,18 @@
+import { async } from "@firebase/util";
 import {
   collection,
   addDoc,
   getDocs,
   doc,
   updateDoc,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "./config";
 
 const ANIMALS_COL = "animals";
 
 export const getAnimals = async () => {
-  // get the collection from the db
   const animalsCol = collection(db, ANIMALS_COL);
-  // get the docs from  the collection
   const animalsSnapshot = await getDocs(animalsCol);
   const animalsList = animalsSnapshot.docs.map((doc) => {
     return { id: doc.id, data: doc.data() };
@@ -32,9 +32,19 @@ export const updateAnimal = async (id, data) => {
 
 export const addAnimal = async (doc) => {
   try {
-    const docRef = await addDoc(collection(db, ANIMALS_COL), doc);
-    console.log("Document written with ID: ", docRef.id);
+    const animalDocRef = await addDoc(collection(db, ANIMALS_COL), doc);
+    console.log("Document written with ID: ", animalDocRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
+  }
+};
+
+export const deleteAnimal = async (id) => {
+  const animalDocRef = doc(db, ANIMALS_COL, id);
+  try {
+    // deleteDoc() - will delete a document from the collection
+    await deleteDoc(animalDocRef);
+  } catch (e) {
+    alert(e);
   }
 };

@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import EditAnimalData from "../components/EditAnimalData";
+import { deleteAnimal } from "../firebase/zooController";
 
 export default function AnimalCard({ id, animal, refreshData }) {
   const [displayEdit, setDisplayEdit] = useState(false);
+
+  const deleteAnimalHandler = () => {
+    // eslint-disable-next-line no-restricted-globals
+    if (confirm("Are You sure?")) {
+      deleteAnimal(id);
+      refreshData();
+    }
+  };
   return (
     <div className="col-sm-6">
       <div className="card animal-card">
@@ -16,6 +25,10 @@ export default function AnimalCard({ id, animal, refreshData }) {
               onClick={() => setDisplayEdit(!displayEdit)}
             >
               {displayEdit ? "Close Edit" : "Edit"}
+            </button>
+
+            <button className="btn btn-danger" onClick={deleteAnimalHandler}>
+              Delete
             </button>
           </div>
           <div className="col-sm-6 image-container">

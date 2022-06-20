@@ -4,6 +4,28 @@ import { addAnimal } from "../firebase/zooController";
 
 export default function AddAnimal() {
   function submitData() {
+    if (name === "" || imgUrl === "" || type === "" || numberOfLegs < 0) {
+      let arr = [];
+      setValidInputs(false);
+
+      if (imgUrl === "") {
+        arr.push("Name");
+      }
+      if (imgUrl === "") {
+        arr.push("Image Url");
+      }
+      if (type === "") {
+        arr.push("Type");
+      }
+      if (numberOfLegs < 0) {
+        arr.push("Number Of Legs");
+      }
+      setInValidInputs(arr);
+
+      return;
+    }
+
+    setValidInputs(true);
     let animal = {
       name: name,
       imgUrl: imgUrl,
@@ -14,11 +36,8 @@ export default function AddAnimal() {
     addAnimal(animal);
   }
 
-  // const [name, setName] = useState(animal.name);
-  // const [imgUrl, setImgUrl] = useState(animal.imgUrl);
-  // const [type, setType] = useState(animal.type);
-  // const [inIsrael, setInIsrael] = useState(animal.inIsrael);
-  // const [numberOfLegs, setNumberOfLegs] = useState(animal.numberOfLegs);
+  const [validInputs, setValidInputs] = useState(true);
+  const [inValidInputs, setInValidInputs] = useState([]);
 
   const [name, setName] = useState("");
   const [imgUrl, setImgUrl] = useState("");
@@ -28,6 +47,15 @@ export default function AddAnimal() {
 
   return (
     <div>
+      {!validInputs && (
+        <p>
+          The Fields:{" "}
+          {inValidInputs.map((i) => (
+            <span style={{ color: "red" }}>{i + ", "}</span>
+          ))}{" "}
+          are invalid
+        </p>
+      )}
       <div className="row">
         <div className="form-group col-md-6">
           <label>Name:</label>
@@ -62,6 +90,7 @@ export default function AddAnimal() {
             className="form-control"
             onChange={(e) => setType(e.target.value)}
           >
+            <option>Choses...</option>
             <option value={"air"}>Air</option>
             <option value={"sea"}>Sea</option>
             <option value={"land"}>Land</option>

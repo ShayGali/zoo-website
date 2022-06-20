@@ -1,10 +1,10 @@
+import "./App.css";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
 import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
-import ZooShareLayout from "./pages/ZooShareLayout";
 import Zoo from "./pages/Zoo";
-import AnimalCard from "./pages/AnimalCard";
 import AddAnimal from "./pages/AddAnimal";
 function App() {
   return (
@@ -13,10 +13,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
 
-          <Route path="zoo" element={<ZooShareLayout />}>
-            <Route index element={<Zoo />} />
-            <Route path=":animalId" element={<AnimalCard />} />
-          </Route>
+          <Route path="zoo" element={<Zoo />} />
 
           <Route path="addAnimal" element={<AddAnimal />} />
 

@@ -1,12 +1,65 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { getAnimals, updateAnimal } from "../firebase/zooController";
+import AnimalCard from "./AnimalCard";
+
 export default function Zoo() {
+  const [animals, setAnimals] = useState([]);
+
+  const [displayAnimals, SetDisplayAnimals] = useState([]);
+  const [displayType, setDisplayType] = useState("");
+
+  useEffect(() => {
+    SetDisplayAnimals(
+      animals.filter((animal) => animal.data.type === displayType)
+    );
+  }, [displayType, animals]);
+
+  useEffect(() => {
+    getAnimals().then((animals) => {
+      setAnimals(animals);
+    });
+  }, []);
+
+  const refreshData = () => {
+    getAnimals().then((animals) => {
+      setAnimals(animals);
+    });
+  };
   return (
     <div>
-      {" "}
-      <Link to="5">
-        <button className="btn btn-primary">Click Me!</button>
-      </Link>
+      <button
+        className="btn btn-outline-info"
+        onClick={() => setDisplayType("sea")}
+      >
+        show see animals
+      </button>
+      <button
+        className="btn btn-outline-warning"
+        onClick={() => setDisplayType("land")}
+      >
+        show land animals
+      </button>
+      <button
+        className="btn btn-outline-success"
+        onClick={() => setDisplayType("air")}
+      >
+        show air animals
+      </button>
+
+      <div className="row">
+        {displayAnimals.map((animal) => {
+          return (
+            <AnimalCard
+              animal={animal.data}
+              id={animal.id}
+              refreshData={refreshData}
+              key={animal.id}
+            />
+          );
+        })}
+      </div>
+      <br />
+      <br />
     </div>
   );
 }

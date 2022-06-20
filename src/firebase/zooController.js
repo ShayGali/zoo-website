@@ -7,11 +7,11 @@ import {
 } from "firebase/firestore";
 import { db } from "./config";
 
-const animalsCol = "animals";
+const ANIMALS_COL = "animals";
 
 export const getAnimals = async () => {
   // get the collection from the db
-  const animalsCol = collection(db, animalsCol);
+  const animalsCol = collection(db, ANIMALS_COL);
   // get the docs from  the collection
   const animalsSnapshot = await getDocs(animalsCol);
   const animalsList = animalsSnapshot.docs.map((doc) => {
@@ -22,7 +22,7 @@ export const getAnimals = async () => {
 };
 
 export const updateAnimal = async (id, data) => {
-  const animalDocRef = doc(db, animalsCol, id);
+  const animalDocRef = doc(db, ANIMALS_COL, id);
   try {
     await updateDoc(animalDocRef, data);
   } catch (e) {
@@ -32,7 +32,7 @@ export const updateAnimal = async (id, data) => {
 
 export const addAnimal = async (doc) => {
   try {
-    const docRef = await addDoc(collection(db, animalsCol), doc);
+    const docRef = await addDoc(collection(db, ANIMALS_COL), doc);
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);

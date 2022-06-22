@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getAnimals } from "../firebase/zooController";
-import AnimalCard from "../components/AnimalCard";
+import { getAnimals } from "../../firebase/zooController";
+import AnimalCard from "./AnimalCard";
 
-export default function Zoo() {
+export default function Animals() {
   const [animals, setAnimals] = useState([]);
 
   const [displayAnimals, SetDisplayAnimals] = useState([]);

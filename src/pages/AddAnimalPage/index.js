@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { addAnimal } from "../firebase/zooController";
+import { addAnimal } from "../../firebase/zooController";
 
 export default function AddAnimal() {
   function submitData() {
@@ -114,7 +114,6 @@ export default function AddAnimal() {
             type="checkbox"
             className="form-check-input"
             onClick={() => setInIsrael(!inIsrael)}
-            checked={inIsrael}
           />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { updateAnimal } from "../firebase/zooController";
+import { updateAnimal } from "../../firebase/zooController";
 
 export default function EditAnimalData({ id, animal, finishEdit }) {
   const [validInputs, setValidInputs] = useState(true);

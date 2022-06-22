@@ -1,6 +1,6 @@
 import React from "react";
-import linkdinLogo from "../assets/linkedin.png";
-import githubLogo from "../assets/github.png";
+import linkedinLogo from "../../../assets/linkedin.png";
+import githubLogo from "../../../assets/github.png";
 export default function Footer() {
   return (
     <>
@@ -16,7 +16,7 @@ export default function Footer() {
             rel="noreferrer"
             style={{ margin: "5px" }}
           >
-            <img src={linkdinLogo} alt="linkdin logo" />
+            <img src={linkedinLogo} alt="linkdin logo" />
           </a>
           <a
             href="https://github.com/ShayGali"

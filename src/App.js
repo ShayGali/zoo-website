@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
 import PageNotFound from "./pages/PageNotFound";
 import HomePage from "./pages/HomePage";
-import ZooShareLayout from "./pages/Zoo";
+import ZooShareLayout from "./pages/ZooPage";
 import Animals from "./components/Animals";
 import AnimalDetails from "./components/AnimalDetails";
 import AddAnimal from "./pages/AddAnimalPage";

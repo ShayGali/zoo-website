@@ -27,7 +27,7 @@ export default function Animals() {
   };
   return (
     <div>
-      <Row className="g-2 ">
+      <Row xs={1} md={1} lg={3} className="g-2 ">
         <Col className="d-flex justify-content-center">
           <Button
             variant="info"
@@ -56,7 +56,7 @@ export default function Animals() {
           </Button>
         </Col>
       </Row>
-      <Row xs={1} md={2} lg={3} className="g-3 m-5">
+      <Row xs={1} md={2} lg={3} className="g-3 m-1">
         {displayAnimals.map((animal) => {
           return (
             <Col key={animal.id}>

@@ -14,7 +14,7 @@ export default function HomePage() {
           style={{
             width: "550px",
             height: "auto",
-            "max-width": "100%",
+            "max-width": "80%",
             margin: "25px",
           }}
         />

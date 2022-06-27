@@ -127,7 +127,6 @@ export default function AddAnimal() {
       <Row className="justify-content-center">
         <Button
           variant="success"
-          onClick={submitData}
           type="submit"
           className="w-50"
           style={{ maxWidth: "350px" }}

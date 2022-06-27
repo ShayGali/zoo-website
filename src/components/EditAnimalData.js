@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { updateAnimal } from "../firebase/zooController";
-import { Form } from "react-bootstrap";
+import { Form, Row, Col, Button } from "react-bootstrap";
 export default function EditAnimalData({ id, animal, finishEdit }) {
   const [validInputs, setValidInputs] = useState(true);
   const [inValidInputs, setInValidInputs] = useState([]);
@@ -41,21 +41,99 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
   };
 
   return (
+    <Form onSubmit={submitChange} style={{ margin: "15px" }}>
+      {!validInputs && (
+        <p>
+          The Fields:{" "}
+          {inValidInputs.map((i) => (
+            <span style={{ color: "red" }} key={i}>
+              {i + ", "}
+            </span>
+          ))}{" "}
+          are invalid
+        </p>
+      )}
+      <Row xs={1} lg={2} className="g-3">
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Edit Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Animal Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Image Url</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Animal Image Url"
+              value={imgUrl}
+              onChange={(e) => setImgUrl(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Number Of legs</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter Animal Number Of legs"
+              value={numberOfLegs}
+              onChange={(e) => setNumberOfLegs(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Number Of legs</Form.Label>
+            <Form.Select value={type} onChange={(e) => setType(e.target.value)}>
+              <option value={""}>Choses...</option>
+              <option value={"air"}>Air</option>
+              <option value={"sea"}>Sea</option>
+              <option value={"land"}>Land</option>
+            </Form.Select>
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Check
+              type="checkbox"
+              label="In Israel"
+              onClick={() => setInIsrael(!inIsrael)}
+            />
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Button
+          variant="success"
+          type="submit"
+          className="w-50"
+          style={{ maxWidth: "350px" }}
+        >
+          SUBMIT
+        </Button>
+      </Row>
+    </Form>
     // <form
     //   onSubmit={submitChange}
     //   style={{ backgroundColor: "lightgray", padding: 10, marginTop: 5 }}
     // >
-    //   {!validInputs && (
-    //     <p>
-    //       The Fields:{" "}
-    //       {inValidInputs.map((i) => (
-    //         <span style={{ color: "red" }} key={i}>
-    //           {i + ", "}
-    //         </span>
-    //       ))}{" "}
-    //       are invalid
-    //     </p>
-    //   )}
+    // {!validInputs && (
+    //   <p>
+    //     The Fields:{" "}
+    //     {inValidInputs.map((i) => (
+    //       <span style={{ color: "red" }} key={i}>
+    //         {i + ", "}
+    //       </span>
+    //     ))}{" "}
+    //     are invalid
+    //   </p>
+    // )}
     //   <div>
     //     <label>Edit Name</label>
     //     <input
@@ -107,6 +185,5 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
     //     </button>
     //   </div>
     // </form>
-    <Form></Form>
   );
 }

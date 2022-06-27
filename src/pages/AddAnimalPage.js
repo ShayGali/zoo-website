@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
+import { Form, Row, Col, Button } from "react-bootstrap";
 import { addAnimal } from "../firebase/zooController";
 
 export default function AddAnimal() {
-  function submitData() {
+  function submitData(event) {
+    event.preventDefault();
     if (name === "" || imgUrl === "" || type === "" || numberOfLegs < 0) {
       let arr = [];
       setValidInputs(false);
@@ -55,7 +56,7 @@ export default function AddAnimal() {
   const [numberOfLegs, setNumberOfLegs] = useState(0);
 
   return (
-    <div>
+    <Form onSubmit={submitData} style={{ margin: "15px" }}>
       {!validInputs && (
         <p>
           The Fields:{" "}
@@ -67,60 +68,73 @@ export default function AddAnimal() {
           are invalid
         </p>
       )}
-      <div className="row">
-        <div className="form-group col-md-6">
-          <label>Name:</label>
-          <input
-            type="text"
-            className="form-control"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="form-group col-md-6">
-          <label>Image Url:</label>
-          <input
-            type="text"
-            className="form-control"
-            value={imgUrl}
-            onChange={(e) => setImgUrl(e.target.value)}
-          />
-        </div>
-        <div className="form-group col-md-6">
-          <label>Number Of legs:</label>
-          <input
-            type="number"
-            className="form-control"
-            value={numberOfLegs}
-            onChange={(e) => setNumberOfLegs(e.target.value)}
-          />
-        </div>
-        <div className="form-group col-md-6">
-          <label>Type:</label>
-          <select
-            className="form-control"
-            onChange={(e) => setType(e.target.value)}
-            value={type}
-          >
-            <option value={""}>Choses...</option>
-            <option value={"air"}>Air</option>
-            <option value={"sea"}>Sea</option>
-            <option value={"land"}>Land</option>
-          </select>
-        </div>
-        <div className="form-group col-md-6">
-          <label className="form-check-label">In Israel: </label>
-          <input
-            type="checkbox"
-            className="form-check-input"
-            onClick={() => setInIsrael(!inIsrael)}
-          />
-        </div>
-      </div>
-      <br />
-      <button className="btn btn-success" onClick={submitData}>
-        Submit
-      </button>
-    </div>
+      <Row xs={1} lg={2} className="g-3">
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Animal Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Image Url</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Animal Image Url"
+              value={imgUrl}
+              onChange={(e) => setImgUrl(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Number Of legs</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter Animal Number Of legs"
+              value={numberOfLegs}
+              onChange={(e) => setNumberOfLegs(e.target.value)}
+            />
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Label>Number Of legs</Form.Label>
+            <Form.Select value={type} onChange={(e) => setType(e.target.value)}>
+              <option value={""}>Choses...</option>
+              <option value={"air"}>Air</option>
+              <option value={"sea"}>Sea</option>
+              <option value={"land"}>Land</option>
+            </Form.Select>
+          </Form.Group>
+        </Col>
+
+        <Col>
+          <Form.Group className="mb-3">
+            <Form.Check
+              type="checkbox"
+              label="In Israel"
+              onClick={() => setInIsrael(!inIsrael)}
+            />
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Button
+          variant="success"
+          onClick={submitData}
+          type="submit"
+          className="w-50"
+          style={{ maxWidth: "350px" }}
+        >
+          SUBMIT
+        </Button>
+      </Row>
+    </Form>
   );
 }

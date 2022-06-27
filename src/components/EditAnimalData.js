@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { updateAnimal } from "../firebase/zooController";
-
+import { Form } from "react-bootstrap";
 export default function EditAnimalData({ id, animal, finishEdit }) {
   const [validInputs, setValidInputs] = useState(true);
   const [inValidInputs, setInValidInputs] = useState([]);
@@ -41,71 +41,72 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
   };
 
   return (
-    <form
-      onSubmit={submitChange}
-      style={{ backgroundColor: "lightgray", padding: 10, marginTop: 5 }}
-    >
-      {!validInputs && (
-        <p>
-          The Fields:{" "}
-          {inValidInputs.map((i) => (
-            <span style={{ color: "red" }} key={i}>
-              {i + ", "}
-            </span>
-          ))}{" "}
-          are invalid
-        </p>
-      )}
-      <div>
-        <label>Edit Name</label>
-        <input
-          type="text"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-          className="form-control"
-        />
+    // <form
+    //   onSubmit={submitChange}
+    //   style={{ backgroundColor: "lightgray", padding: 10, marginTop: 5 }}
+    // >
+    //   {!validInputs && (
+    //     <p>
+    //       The Fields:{" "}
+    //       {inValidInputs.map((i) => (
+    //         <span style={{ color: "red" }} key={i}>
+    //           {i + ", "}
+    //         </span>
+    //       ))}{" "}
+    //       are invalid
+    //     </p>
+    //   )}
+    //   <div>
+    //     <label>Edit Name</label>
+    //     <input
+    //       type="text"
+    //       onChange={(e) => setName(e.target.value)}
+    //       value={name}
+    //       className="form-control"
+    //     />
 
-        <label>Edit Number Of Legs</label>
-        <input
-          type="number"
-          onChange={(e) => setNumberOfLegs(e.target.value)}
-          value={numberOfLegs}
-          className="form-control"
-        />
+    //     <label>Edit Number Of Legs</label>
+    //     <input
+    //       type="number"
+    //       onChange={(e) => setNumberOfLegs(e.target.value)}
+    //       value={numberOfLegs}
+    //       className="form-control"
+    //     />
 
-        <label>Edit Image Url</label>
-        <input
-          type="test"
-          onChange={(e) => setImgUrl(e.target.value)}
-          value={imgUrl}
-          className="form-control"
-        />
+    //     <label>Edit Image Url</label>
+    //     <input
+    //       type="test"
+    //       onChange={(e) => setImgUrl(e.target.value)}
+    //       value={imgUrl}
+    //       className="form-control"
+    //     />
 
-        <label>Type:</label>
-        <select
-          className="form-control"
-          onChange={(e) => setType(e.target.value)}
-          defaultValue={type}
-        >
-          <option value={"air"}>Air</option>
-          <option value={"sea"}>Sea</option>
-          <option value={"land"}>Land</option>
-        </select>
-        <br />
-        <label className="form-check-label">In Israel: </label>
-        <input
-          type="checkbox"
-          className="form-check-input"
-          defaultChecked={inIsrael}
-          onClick={() => setInIsrael(!inIsrael)}
-        />
+    //     <label>Type:</label>
+    //     <select
+    //       className="form-control"
+    //       onChange={(e) => setType(e.target.value)}
+    //       defaultValue={type}
+    //     >
+    //       <option value={"air"}>Air</option>
+    //       <option value={"sea"}>Sea</option>
+    //       <option value={"land"}>Land</option>
+    //     </select>
+    //     <br />
+    //     <label className="form-check-label">In Israel: </label>
+    //     <input
+    //       type="checkbox"
+    //       className="form-check-input"
+    //       defaultChecked={inIsrael}
+    //       onClick={() => setInIsrael(!inIsrael)}
+    //     />
 
-        <br />
+    //     <br />
 
-        <button type="submit" className="btn btn-primary">
-          Save changes
-        </button>
-      </div>
-    </form>
+    //     <button type="submit" className="btn btn-primary">
+    //       Save changes
+    //     </button>
+    //   </div>
+    // </form>
+    <Form></Form>
   );
 }

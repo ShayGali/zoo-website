@@ -27,7 +27,7 @@ export default function Animals() {
   };
   return (
     <div>
-      <Row xs={1} md={1} lg={3} className="g-2 ">
+      <Row xs={1} md={1} lg={3} className="g-2">
         <Col className="d-flex justify-content-center">
           <Button
             variant="info"

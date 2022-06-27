@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { addAnimal } from "../../firebase/zooController";
+import { addAnimal } from "../firebase/zooController";
 
 export default function AddAnimal() {
   function submitData() {

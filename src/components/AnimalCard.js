@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteAnimal } from "../../../firebase/zooController";
+import { deleteAnimal } from "../firebase/zooController";
 import { Link } from "react-router-dom";
 export default function AnimalCard({ id, animal, refreshData }) {
   const deleteAnimalHandler = () => {

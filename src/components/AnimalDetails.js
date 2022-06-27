@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAnimals } from "../../firebase/zooController";
-import EditAnimalData from "../EditAnimalData";
+import { getAnimals } from "../firebase/zooController";
+import EditAnimalData from "./EditAnimalData";
 import { Link } from "react-router-dom";
 
 export default function AnimalDetails() {

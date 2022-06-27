@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAnimals } from "../../firebase/zooController";
+import { getAnimals } from "../firebase/zooController";
 import AnimalCard from "./AnimalCard";
 
 export default function Animals() {

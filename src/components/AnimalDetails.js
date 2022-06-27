@@ -1,8 +1,10 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Card, Row, Alert, Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import { getAnimals } from "../firebase/zooController";
 import EditAnimalData from "./EditAnimalData";
-import { Link } from "react-router-dom";
 
 export default function AnimalDetails() {
   const id = useParams().animalId;
@@ -28,48 +30,79 @@ export default function AnimalDetails() {
 
   return (
     <>
-      {isFetch && animal && (
-        <div className="card">
-          <div className="row">
-            <div className="card-body col-sm-6">
-              <h5 className="card-title">{animal.name}</h5>
+      <Container className=" d-flex justify-content-center">
+        {isFetch && animal && (
+          <Card
+            style={{
+              "margin-bottom": "20px",
+              padding: "10px",
+              minWidth: "50%",
+            }}
+          >
+            <Card.Img
+              variant="top"
+              src={animal.imgUrl}
+              style={{ width: "250px" }}
+              className="profile-img"
+            />
+            <Card.Body className="d-flex flex-column">
+              <Card.Title>
+                <span>
+                  {animal.name.charAt(0).toUpperCase() + animal.name.slice(1)}
+                </span>
+              </Card.Title>
               <p>Number Of Legs: {animal.numberOfLegs}</p>
               <p>In Israel: {animal.inIsrael ? "Yes" : "No"}</p>
-              <button
-                className="btn btn-primary"
+            </Card.Body>
+
+            <Row className="justify-content-center">
+              <Button
+                className="w-50"
+                variant="primary"
                 onClick={() => setDisplayEdit(!displayEdit)}
               >
                 {displayEdit ? "Close Edit" : "Edit"}
-              </button>
-            </div>
-            <div className="col-sm-6 image-container">
-              <img src={animal.imgUrl} alt="" className="profile-img" />
-            </div>
-          </div>
-          {displayEdit && (
-            <EditAnimalData
-              id={id}
-              animal={animal}
-              finishEdit={() => {
-                refreshData();
-                setDisplayEdit(false);
+              </Button>
+            </Row>
+            {displayEdit && (
+              <EditAnimalData
+                id={id}
+                animal={animal}
+                finishEdit={() => {
+                  refreshData();
+                  setDisplayEdit(false);
 
-                alert("change successfully");
-              }}
-            />
-          )}
-        </div>
-      )}
+                  alert("change successfully");
+                }}
+              />
+            )}
+          </Card>
+        )}
 
-      {isFetch && !animal && (
-        <h3 style={{ color: "red" }}>Animal with the id {id} not found</h3>
-      )}
-
+        {isFetch && !animal && (
+          <Alert
+            variant="danger"
+            className="w-100"
+            style={{ marginTop: "60px" }}
+          >
+            Animal with the id {id} was not found
+          </Alert>
+        )}
+      </Container>
       <br />
-      <Link to={"/zoo"}>
-        <button type="button" className="btn btn-dark">
-          Back
-        </button>
+      <Link
+        to={"/zoo"}
+        className="d-flex justify-content-center"
+        style={{ textDecoration: "none" }}
+      >
+        <Button
+          variant="dark"
+          type="submit"
+          className="w-50"
+          style={{ maxWidth: "350px" }}
+        >
+          Go Back
+        </Button>
       </Link>
     </>
   );

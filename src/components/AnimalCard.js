@@ -24,22 +24,20 @@ export default function AnimalCard({ id, animal, refreshData }) {
             {animal.name.charAt(0).toUpperCase() + animal.name.slice(1)}
           </span>
         </Card.Title>
-        <Card.Body>
-          <p>Number Of Legs: {animal.numberOfLegs}</p>
-          <p>In Israel: {animal.inIsrael ? "Yes" : "No"}</p>
-          <Link to={id}>
-            <Button variant="primary" className="w-100">
-              View Data
-            </Button>
-          </Link>
-          <Button
-            variant="danger"
-            className="w-100"
-            onClick={deleteAnimalHandler}
-          >
-            Delete
+        <p>Number Of Legs: {animal.numberOfLegs}</p>
+        <p>In Israel: {animal.inIsrael ? "Yes" : "No"}</p>
+        <Link to={id}>
+          <Button variant="primary" className="w-100">
+            View Data
           </Button>
-        </Card.Body>
+        </Link>
+        <Button
+          variant="danger"
+          className="w-100"
+          onClick={deleteAnimalHandler}
+        >
+          Delete
+        </Button>
       </Card.Body>
     </Card>
   );

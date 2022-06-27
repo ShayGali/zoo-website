@@ -3,16 +3,16 @@
   justify-content: center;
 }
 
-.profile-img{
+.profile-img {
   width: 240px;
   height: auto;
-  margin:auto
+  margin: auto;
 }
 
-.animal-card{
+.animal-card {
   margin: 20px;
 }
 
-.btn{
+.btn {
   margin: 5px;
 }

@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[Link to Github pages](https://shaygali.github.io/Zoo-Website/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

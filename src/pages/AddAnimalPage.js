@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button, Alert } from "react-bootstrap";
 import { addAnimal } from "../firebase/zooController";
 
 export default function AddAnimal() {
@@ -58,7 +58,7 @@ export default function AddAnimal() {
   return (
     <Form onSubmit={submitData} style={{ margin: "15px" }}>
       {!validInputs && (
-        <p>
+        <Alert variant="danger">
           The Fields:{" "}
           {inValidInputs.map((i) => (
             <span style={{ color: "red" }} key={i}>
@@ -66,7 +66,7 @@ export default function AddAnimal() {
             </span>
           ))}{" "}
           are invalid
-        </p>
+        </Alert>
       )}
       <Row xs={1} lg={2} className="g-3">
         <Col>

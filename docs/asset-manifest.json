@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Zoo-Website/static/css/main.ab560953.css",
+    "main.js": "/Zoo-Website/static/js/main.e3be9238.js",
+    "index.html": "/Zoo-Website/index.html",
+    "main.ab560953.css.map": "/Zoo-Website/static/css/main.ab560953.css.map",
+    "main.e3be9238.js.map": "/Zoo-Website/static/js/main.e3be9238.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab560953.css",
+    "static/js/main.e3be9238.js"
+  ]
+}

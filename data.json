@@ -1,0 +1,222 @@
+[
+  {
+    "id": "0tqlaGIzmYBY8IQpOHL8",
+    "data": {
+      "numberOfLegs": "2",
+      "type": "air",
+      "imgUrl": "https://cdn.pixabay.com/photo/2015/12/10/19/50/haliaeetus-vocifer-1086903__340.jpg",
+      "name": "osprey",
+      "inIsrael": false
+    }
+  },
+  {
+    "id": "31XJry9IN86bQ51j7etg",
+    "data": {
+      "type": "land",
+      "inIsrael": false,
+      "numberOfLegs": "4",
+      "imgUrl": "https://cdn.pixabay.com/photo/2022/05/25/07/42/cameroon-sheep-7219965__340.jpg",
+      "name": "cameroon sheep"
+    }
+  },
+  {
+    "id": "577AyYIdjgXbpe7tMXke",
+    "data": {
+      "name": "monkey",
+      "numberOfLegs": "4",
+      "inIsrael": false,
+      "type": "land",
+      "imgUrl": "https://cdn.pixabay.com/photo/2022/05/21/16/23/monkey-7211863__340.jpg"
+    }
+  },
+  {
+    "id": "6aym6xA6OD87VmKNPets",
+    "data": {
+      "name": "kingfisher",
+      "numberOfLegs": "2",
+      "type": "air",
+      "imgUrl": "https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453__340.jpg",
+      "inIsrael": true
+    }
+  },
+  {
+    "id": "7aVUz28dNeEbj5or2no2",
+    "data": {
+      "name": "seagull",
+      "numberOfLegs": "2",
+      "inIsrael": false,
+      "type": "air",
+      "imgUrl": "https://cdn.pixabay.com/photo/2015/06/11/22/27/seagull-806303__340.jpg"
+    }
+  },
+  {
+    "id": "E4SEnpvDJQM1v82WcPZ6",
+    "data": {
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/10/10/22/05/jellyfishes-1730018__340.jpg",
+      "numberOfLegs": "0",
+      "name": "jellyfishe",
+      "type": "sea",
+      "inIsrael": true
+    }
+  },
+  {
+    "id": "JeoEkP6Eg0jevAZ8oHVH",
+    "data": {
+      "inIsrael": true,
+      "type": "sea",
+      "name": "sawfish",
+      "imgUrl": "https://cdn.pixabay.com/photo/2012/03/04/00/02/animal-21731__340.jpg",
+      "numberOfLegs": "1"
+    }
+  },
+  {
+    "id": "K64YuXYsukNpSFY40eDQ",
+    "data": {
+      "type": "land",
+      "imgUrl": "https://cdn.pixabay.com/photo/2019/06/08/00/11/dairy-cow-4259340__340.jpg",
+      "inIsrael": true,
+      "numberOfLegs": "4",
+      "name": "cow"
+    }
+  },
+  {
+    "id": "MJEDhb47kT6scYOEnQD3",
+    "data": {
+      "type": "land",
+      "inIsrael": true,
+      "name": "snail",
+      "numberOfLegs": "0",
+      "imgUrl": "https://cdn.pixabay.com/photo/2015/03/27/02/12/snail-694141__340.jpg"
+    }
+  },
+  {
+    "id": "MMbHD7gCoJhl1vX4x9Gk",
+    "data": {
+      "imgUrl": "https://cdn.pixabay.com/photo/2013/08/10/17/01/cheetahs-171315__480.jpg",
+      "numberOfLegs": "4",
+      "type": "land",
+      "name": "cheetahs",
+      "inIsrael": false
+    }
+  },
+  {
+    "id": "NC3xTPzSRdnNWh7KKszV",
+    "data": {
+      "type": "air",
+      "inIsrael": true,
+      "imgUrl": "https://cdn.pixabay.com/photo/2017/09/04/20/52/bald-eagle-2715461__340.jpg",
+      "numberOfLegs": "2",
+      "name": "eagle"
+    }
+  },
+  {
+    "id": "OWPxhgisuYZ0PBj7D75E",
+    "data": {
+      "numberOfLegs": "4",
+      "inIsrael": true,
+      "type": "sea",
+      "name": "turtle",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/11/29/07/15/animal-1868046__340.jpg"
+    }
+  },
+  {
+    "id": "S1GY03FsTc6pKvKSGyha",
+    "data": {
+      "type": "land",
+      "numberOfLegs": "4",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/01/29/15/24/dog-1168123__340.jpg",
+      "inIsrael": true,
+      "name": "dog"
+    }
+  },
+  {
+    "id": "UHlaDOQWcz3pY5O3WGzC",
+    "data": {
+      "inIsrael": true,
+      "type": "sea",
+      "name": "whale",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/11/22/19/33/whale-1850235__340.jpg",
+      "numberOfLegs": "0"
+    }
+  },
+  {
+    "id": "XMOX7SSD8nX1mGlVw2WX",
+    "data": {
+      "inIsrael": true,
+      "imgUrl": "https://cdn.pixabay.com/photo/2018/06/27/22/39/turtle-3502814__340.jpg",
+      "numberOfLegs": "4",
+      "name": "turtle",
+      "type": "land"
+    }
+  },
+  {
+    "id": "eLxRT1kKXNqBiYguHb67",
+    "data": {
+      "numberOfLegs": "2",
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/06/04/16/50/bird-1435859__340.jpg",
+      "name": "parakeet",
+      "inIsrael": true,
+      "type": "air"
+    }
+  },
+  {
+    "id": "gEmyzAsl2qOoGVAfenP4",
+    "data": {
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/11/23/18/27/hummingbird-1854225__340.jpg",
+      "numberOfLegs": "2",
+      "inIsrael": true,
+      "name": "hummingbird",
+      "type": "air"
+    }
+  },
+  {
+    "id": "gEw6UGfCuS1a2BqeNz8h",
+    "data": {
+      "imgUrl": "https://cdn.pixabay.com/photo/2018/04/10/16/59/bear-3308068__340.jpg",
+      "name": "white bear",
+      "type": "sea",
+      "numberOfLegs": "4",
+      "inIsrael": false
+    }
+  },
+  {
+    "id": "hPlPFaTDGXTqGyql3dGX",
+    "data": {
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/08/28/21/18/bird-1626911__340.jpg",
+      "type": "air",
+      "name": "raptor",
+      "numberOfLegs": "2",
+      "inIsrael": false
+    }
+  },
+  {
+    "id": "sIOjUUwLrIAbwpCqFzOR",
+    "data": {
+      "numberOfLegs": "2",
+      "name": "sea lion",
+      "imgUrl": "https://cdn.pixabay.com/photo/2019/09/16/14/43/sea-lion-4481175__340.jpg",
+      "inIsrael": true,
+      "type": "sea"
+    }
+  },
+  {
+    "id": "uCvyzX5x9ZY22qZhSWLu",
+    "data": {
+      "numberOfLegs": "2",
+      "inIsrael": false,
+      "name": "grey-heron",
+      "type": "air",
+      "imgUrl": "https://cdn.pixabay.com/photo/2014/06/02/21/19/grey-heron-360655__340.jpg"
+    }
+  },
+  {
+    "id": "uSNapYdNifbxKBoTApj3",
+    "data": {
+      "type": "land",
+      "inIsrael": true,
+      "numberOfLegs": "4",
+      "imgUrl": "https://cdn.pixabay.com/photo/2018/10/04/22/11/horse-3724646__340.jpg",
+      "name": "horse"
+    }
+  }
+]

@@ -11,7 +11,7 @@ import AddAnimal from "./pages/AddAnimalPage";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes basename="Zoo-Website">
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
 

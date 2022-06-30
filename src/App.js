@@ -10,7 +10,7 @@ import AnimalDetails from "./components/AnimalDetails";
 import AddAnimal from "./pages/AddAnimalPage";
 function App() {
   return (
-    <BrowserRouter basename="/Zoo-Website">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />

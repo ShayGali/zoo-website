@@ -89,9 +89,11 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
         </Col>
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Number Of legs</Form.Label>
+            <Form.Label>Type</Form.Label>
             <Form.Select value={type} onChange={(e) => setType(e.target.value)}>
-              <option value={""}>Choses...</option>
+              <option value={""} selected="true" disabled="disabled">
+                Choses...
+              </option>
               <option value={"air"}>Air</option>
               <option value={"sea"}>Sea</option>
               <option value={"land"}>Land</option>
@@ -103,7 +105,7 @@ export default function EditAnimalData({ id, animal, finishEdit }) {
             <Form.Check
               type="checkbox"
               label="In Israel"
-              onClick={() => setInIsrael(!inIsrael)}
+              onChange={(e) => setInIsrael(e.target.checked)}
             />
           </Form.Group>
         </Col>

@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Link to netlify page](https://euphonious-praline-84f840.netlify.app/).
+[Link to netlify page](https://zoo-websize.netlify.app/).
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a7a9afb0-c388-4d56-9d62-53ef1d439cdb/deploy-status)](https://app.netlify.com/sites/zoo-websize/deploys)
 
 

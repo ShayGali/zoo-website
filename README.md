@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Link to Github pages](https://shaygali.github.io/Zoo-Website/).
+[Link to netlify page](https://euphonious-praline-84f840.netlify.app/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

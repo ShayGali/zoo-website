@@ -11,7 +11,7 @@ The information is stored in a firebase firestore database.
 
 The site is a responsive site built using bootstrap.
 
-## Tool
+## Tools
 
 ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Firebase](https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=for-the-badge&logo=firebase)

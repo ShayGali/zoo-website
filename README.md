@@ -39,7 +39,7 @@ When he select a list of animals of the specified type will be shown.
 
 The user can edit the animal data.
 
-desc|pc | phone
+description|pc | phone
 :-:|:-:|:-:
 on open|![Zoo page on open](./pages%20images/pc/zoo-on%20open.png)|![Zoo page on open](./pages%20images/phone/zoo-on%20open.jpg)
 selected 1|![Zoo page on select](./pages%20images/pc/zoo-selected.png)|![Zoo page on select](./pages%20images/phone/zoo-selected.jpg)
@@ -51,7 +51,7 @@ When the user clicks on the view data buttons he will be navigate to this page.
 
 He have the ability to edit the animal data. All changes will change immediately throughout the app and database.
 
-desc|pc | phone
+description|pc | phone
 :-:|:-:|:-:
 on open|![Animal page on open](./pages%20images/pc/animal%20page.png)|![Animal page on open](./pages%20images/phone/animal%20page.jpg)
 edit|![Animal page edit](./pages%20images/pc/animal%20page%20-edit.png)|![Animal page edit](./pages%20images/phone/animal%20page%20-edit.jpg)

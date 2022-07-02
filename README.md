@@ -1,74 +1,63 @@
 # Getting Started with Create React App
 
-[Link to netlify page](https://zoo-websize.netlify.app/).
+[Link to netlify page](https://zoo-websize.netlify.app/)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a7a9afb0-c388-4d56-9d62-53ef1d439cdb/deploy-status)](https://app.netlify.com/sites/zoo-websize/deploys)
 
+This project was built as part of an react course.
+We had to build a site that represents a zoo, with the option to add animals and edit the information about them.
+
+The information is stored in a firebase firestore database.
+
+The site is a responsive site built using bootstrap.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## <ins>Pages</ins>
 
-In the project directory, you can run:
+### <ins> Home Page</ins>
 
-### `npm start`
+The website home page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+pc | phone
+:-:|:-:
+![Home page](./pages%20images/pc/home%20page.png)|![Home page](./pages%20images/phone/home%20page.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### <ins> Zoo Page</ins>
 
-### `npm test`
+This page contains 3 buttons for select the type of the animal that the user can choose to see.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When he select a list of animals of the specified type will be shown.
 
-### `npm run build`
+The user can edit the animal data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+desc|pc | phone
+:-:|:-:|:-:
+on open|![Zoo page on open](./pages%20images/pc/zoo-on%20open.png)|![Zoo page on open](./pages%20images/phone/zoo-on%20open.jpg)
+selected 1|![Zoo page on select](./pages%20images/pc/zoo-selected.png)|![Zoo page on select](./pages%20images/phone/zoo-selected.jpg)
+selected 2|![Zoo page on select](./pages%20images/pc/zoo-selected2.png)|![Zoo page on select](./pages%20images/phone/zoo-selected2.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### <ins> Animal Page</ins>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When the user clicks on the view data buttons he will be navigate to this page.
 
-### `npm run eject`
+He have the ability to edit the animal data. All changes will change immediately throughout the app and database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+desc|pc | phone
+:-:|:-:|:-:
+on open|![Animal page on open](./pages%20images/pc/animal%20page.png)|![Animal page on open](./pages%20images/phone/animal%20page.jpg)
+edit|![Animal page edit](./pages%20images/pc/animal%20page%20-edit.png)|![Animal page edit](./pages%20images/phone/animal%20page%20-edit.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### <ins> Add Animal Page</ins>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The user have the ability to add a new animal to the zoo.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+pc | phone
+:-:|:-:
+![Add Animal page](./pages%20images/pc/add%20animal.png)|![Add Animal page](./pages%20images/phone/add%20animal.jpg)
 
-## Learn More
+### <ins> Firestore</ins>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The data in the firestore.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Firestore](./pages%20images/firestore.png)

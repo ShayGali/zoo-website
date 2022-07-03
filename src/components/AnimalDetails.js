@@ -15,17 +15,25 @@ export default function AnimalDetails() {
   const [isFetch, setIsFetch] = useState(false);
 
   useLayoutEffect(() => {
-    getAnimals().then((animals) => {
-      let animal = animals.find((animal) => animal.id === id);
-      if (animal) setAnimal(animal.data);
-      setIsFetch(true);
-    });
+    getAnimals()
+      .then((animals) => {
+        let animal = animals.find((animal) => animal.id === id);
+        if (animal) setAnimal(animal.data);
+        setIsFetch(true);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, [id]);
 
   const refreshData = () => {
-    getAnimals().then((animals) => {
-      setAnimal(animals.find((animal) => animal.id === id).data);
-    });
+    getAnimals()
+      .then((animals) => {
+        setAnimal(animals.find((animal) => animal.id === id).data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (

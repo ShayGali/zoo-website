@@ -15,15 +15,23 @@ export default function Animals() {
   }, [displayType, animals]);
 
   useEffect(() => {
-    getAnimals().then((animals) => {
-      setAnimals(animals);
-    });
+    getAnimals()
+      .then((animals) => {
+        setAnimals(animals);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   const refreshData = () => {
-    getAnimals().then((animals) => {
-      setAnimals(animals);
-    });
+    getAnimals()
+      .then((animals) => {
+        setAnimals(animals);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
   return (
     <div>

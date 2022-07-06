@@ -61,6 +61,7 @@ export default function Animals() {
             onClick={() => setDisplayType("air")}
           >
             show air animals
+            {/*This code belongs to ShayG*/}
           </Button>
         </Col>
       </Row>

@@ -1,5 +1,7 @@
 {
   "name": "zoo-website",
+  "author": "ShayG",
+  "description": "ShayG Zoo Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

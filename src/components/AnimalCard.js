@@ -28,7 +28,7 @@ export default function AnimalCard({ id, animal, refreshData }) {
         <p>In Israel: {animal.inIsrael ? "Yes" : "No"}</p>
         <Link to={id}>
           <Button variant="primary" className="w-100">
-            View Data
+            View Data {/*ShayG*/}
           </Button>
         </Link>
         <Button

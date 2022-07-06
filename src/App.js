@@ -22,6 +22,7 @@ function App() {
 
           <Route path="addAnimal" element={<AddAnimal />} />
 
+            <Route path="ShayG" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

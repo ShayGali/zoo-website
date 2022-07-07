@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Zoo
 
 [Link to netlify page](https://zoo-websize.netlify.app/)
 

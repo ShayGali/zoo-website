@@ -42,7 +42,7 @@ export default function Animals() {
             className="w-50"
             onClick={() => setDisplayType("sea")}
           >
-            show see animals
+            show sea animals
           </Button>
         </Col>
         <Col className="d-flex justify-content-center">
